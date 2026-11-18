@@ -1,0 +1,40 @@
+{
+  "name": "dsh-codex-bridge",
+  "version": "0.1.16",
+  "private": true,
+  "description": "Bidirectional collaboration between a user-created DSH session and a user-created Codex thread.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "skills",
+    "docs/protocol.md",
+    "docs/desktop-native.md",
+    "docs/verification-summary.md",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "dsh-bridge": "bin/dsh-bridge.js",
+    "dsh-bridge-mcp": "bin/dsh-bridge-mcp.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "doctor": "node bin/dsh-bridge.js doctor"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

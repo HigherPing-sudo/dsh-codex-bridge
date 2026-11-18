@@ -1,0 +1,35 @@
+# Local dependencies and generated archives
+node_modules/
+*.tgz
+*.zip
+coverage/
+
+# Local diagnostics, backups and package-manager caches
+.scratch/
+backups/
+.npm-cache/
+.npm-logs/
+*.log
+
+# Runtime state, credentials and local agent configuration
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.dsh/
+host.json
+bridge.json
+*.sqlite
+*.sqlite-*
+*.pem
+*.key
+
+# Machine-specific development notes; publish only curated docs below
+docs/*
+!docs/protocol.md
+!docs/desktop-native.md
+!docs/verification-summary.md
+
+# Development-only archive extraction utilities
+tools/

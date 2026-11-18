@@ -1,0 +1,13 @@
+- insert:
+    - id: dsh-codex-bridge
+      name: dsh-codex-bridge
+      config:
+        # 0 picks a free loopback port and records it in
+        # <DSH_HOME>/bridge/<profile>/host.json; the Codex adapter reads that file.
+        port: 0
+        # How long a `send` tool call waits for the transport acknowledgement
+        # before returning "saved" and finishing delivery in the background.
+        sendWaitMs: 8000
+        codexTimeoutMs: 90000
+        # Desktop-native status observation, no Codex hooks or CLI daemon.
+        desktopPollMs: 2000
